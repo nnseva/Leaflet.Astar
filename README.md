@@ -80,8 +80,9 @@ Implementation Notes
 
 * `getNearTo()` and `getNextTo()` graph methods must return a list or list-like object, containing node objects
 * node objects returned by graph methods are opaque for the algorithm and will be passed to other graph methods (as `node` parameters) unmodified
+* node identifiers returned by the `getNodeId()` graph method should be strictly comparable objects, i.e. integer numbers or strings, available to use as object property identifiers
 * coordinates (`ll` parameters) passed to the algorithm constructor are opaque for the algorithm and will be passed to graph methods unmodified
-* `getDistanceBetween()` method of the graph will be called by the algorithm *only* for nodes immediately linked in the graph
+* `getDistanceBetween()` method of the graph will be called by the algorithm *only* for nodes immediately linked to each other in the graph
 * distances used and returned by the algorithm and graph methods should be numbers (integer or float) supporting arithmetics and compare operators
 * path returned by `run()` and `path()` methods of the algorithm is a list of nodes
 
