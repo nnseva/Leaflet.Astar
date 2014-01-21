@@ -1,7 +1,7 @@
 Leaflet.Astar
 =============
 
-Astar (A*) algorithm implementation intended to be used in Leaflet-based applications.
+<a href="https://en.wikipedia.org/wiki/A-star">Astar (A*)</a> search algorithm implementation intended to be used in <a href="http://leafletjs.com/">Leaflet</a>-based applications.
 
 The algorithm was implemented to be useable in almost any environment. It does not implement the graph itself, using user-defined graph implementation instead. The user should implement 4 simple methods, trivial more or less, for graph to be analized by the algorithm.
 
@@ -10,7 +10,7 @@ Moreover, graph data and coordinates are fully opaque for the algorithm. User ca
 Requirements
 ============
 
-The algorithm code uses Leaflet (L.Class) and jQuery (some number of utility functions).
+The algorithm code uses <a href="http://leafletjs.com/">Leaflet</a> (L.Class and L.Util) and <a href="http://jquery.com/">jQuery</a> (some number of utility functions).
 
 Using
 =====
@@ -85,5 +85,7 @@ Implementation Notes
 * `getDistanceBetween()` method of the graph will be called by the algorithm *only* for nodes immediately linked to each other in the graph
 * distances used and returned by the algorithm and graph methods should be numbers (integer or float) supporting arithmetics and compare operators
 * path returned by `run()` and `path()` methods of the algorithm is a list of nodes
+
+Distance criterion returned by the graph implementation is a key to make the algorithm working properly. Wrong distance estimation may lead to unexpected results. The distance may be evaluated as a true distance on the plain surface, as well as distance on the earth surface, as well as time spent estimation, as well as any other criterion estimating amounts of valuable resources consumed to achieve some abstract coordinates or graph node from another node.
 
 See also into the code to discover details.
